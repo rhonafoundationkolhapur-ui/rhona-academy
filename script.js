@@ -1,0 +1,126 @@
+// ===============================
+// RHONA FOUNDATION
+// Premium JavaScript
+// ===============================
+
+// Navbar Shadow on Scroll
+
+window.addEventListener("scroll", function () {
+
+const navbar = document.querySelector(".navbar");
+
+if(window.scrollY>50){
+
+navbar.classList.add("shadow-lg");
+
+}else{
+
+navbar.classList.remove("shadow-lg");
+
+}
+
+});
+
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+
+// Reveal Animation
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition="0.8s";
+
+observer.observe(card);
+
+});
+
+
+// WhatsApp Floating Button
+
+const whatsapp=document.createElement("a");
+
+whatsapp.href="https://wa.me/918482838716";
+
+whatsapp.target="_blank";
+
+whatsapp.innerHTML='<i class="fab fa-whatsapp"></i>';
+
+whatsapp.className="whatsapp-float";
+
+document.body.appendChild(whatsapp);
+
+
+// Back To Top Button
+
+const topBtn=document.createElement("button");
+
+topBtn.innerHTML="⬆";
+
+topBtn.className="top-btn";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>400){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
