@@ -124,3 +124,39 @@ behavior:"smooth"
 });
 
 });
+
+// Offer Countdown (24 Hours)
+
+let endDate = new Date();
+
+endDate.setHours(endDate.getHours() + 24);
+
+function updateCountdown(){
+
+let now = new Date();
+
+let diff = endDate - now;
+
+if(diff<=0){
+
+document.getElementById("countdown").innerHTML="Offer Ended";
+
+return;
+
+}
+
+let h=Math.floor(diff/(1000*60*60));
+
+let m=Math.floor((diff%(1000*60*60))/(1000*60));
+
+let s=Math.floor((diff%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML=
+
+`${h}h ${m}m ${s}s`;
+
+}
+
+setInterval(updateCountdown,1000);
+
+updateCountdown();
