@@ -1067,3 +1067,43 @@ color:#0F766E;
 font-weight:700;
 
 }
+
+/* ==========================
+SUCCESS SECTION
+========================== */
+
+.success-card{
+
+border:none;
+
+border-radius:25px;
+
+transition:.4s;
+
+background:#ffffff;
+
+}
+
+.success-card h1{
+
+font-size:55px;
+
+}
+
+.success-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+background:#0F766E;
+
+color:white;
+
+}
+
+.success-card:hover h4{
+
+color:white;
+
+}
