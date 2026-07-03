@@ -653,7 +653,7 @@ VERSION 3.1 HERO
     align-items:center;
     background:linear-gradient(135deg,#f0fdfa,#ffffff,#ecfeff);
     position:relative;
-    overflow:hidden;
+    overflow:visible;
 }
 
 .hero::before{
