@@ -344,3 +344,15 @@ students++;
 document.getElementById("studentCount").innerHTML=students+"+";
 
 },10000);
+
+// Product Card Animation
+
+document.querySelectorAll(".product-card").forEach((card)=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transition="0.4s";
+
+});
+
+});
