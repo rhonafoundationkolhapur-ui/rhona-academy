@@ -316,3 +316,19 @@ document.getElementById("loader").style.display="none";
 },1200);
 
 });
+
+// Offer Popup
+
+window.onload=function(){
+
+setTimeout(()=>{
+
+new bootstrap.Modal(
+
+document.getElementById('offerModal')
+
+).show();
+
+},2500);
+
+}
