@@ -478,3 +478,25 @@ background:#ff6f00;
 color:white;
 
 }
+
+.ratio iframe{
+
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.counter{
+
+font-size:60px;
+
+font-weight:700;
+
+}
+
+.bg-success{
+
+background:linear-gradient(135deg,#198754,#0d5c2b)!important;
+
+}
