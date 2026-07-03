@@ -865,3 +865,19 @@ animation:spin 2s linear infinite;
 100%{transform:rotate(360deg);}
 
 }
+
+.payment-qr{
+
+border-radius:25px;
+
+transition:.4s;
+
+box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.payment-qr:hover{
+
+transform:scale(1.05);
+
+}
