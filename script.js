@@ -151,7 +151,13 @@ let m=Math.floor((diff%(1000*60*60))/(1000*60));
 
 let s=Math.floor((diff%(1000*60))/1000);
 
-document.getElementById("countdown").innerHTML=
+const countdown = document.getElementById("countdown");
+
+if(countdown){
+
+countdown.innerHTML=`${h}h ${m}m ${s}s`;
+
+}
 
 `${h}h ${m}m ${s}s`;
 
@@ -251,15 +257,13 @@ document.body.appendChild(call);
 
 // AOS Animation
 
-AOS.init({
-
-duration:1000,
-
-once:true,
-
-offset:100
-
-});
+if (typeof AOS !== "undefined") {
+    AOS.init({
+        duration:1000,
+        once:true,
+        offset:100
+    });
+}
 
 // Premium Navbar
 
@@ -311,7 +315,13 @@ window.addEventListener("load",()=>{
 
 setTimeout(()=>{
 
-document.getElementById("loader").style.display="none";
+const loader=document.getElementById("loader");
+
+if(loader){
+
+loader.style.display="none";
+
+}
 
 },1200);
 
@@ -319,15 +329,43 @@ document.getElementById("loader").style.display="none";
 
 // Offer Popup
 
-window.onload=function(){
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+if(loader){
 
 setTimeout(()=>{
 
-new bootstrap.Modal(
+loader.style.display="none";
 
-document.getElementById('offerModal')
+},1200);
 
-).show();
+}
+
+const modal=document.getElementById("offerModal");
+
+if(modal){
+
+setTimeout(()=>{
+
+new bootstrap.Modal(modal).show();
+
+},2500);
+
+}
+
+});
+
+setTimeout(()=>{
+
+const modal=document.getElementById("offerModal");
+
+if(modal){
+
+new bootstrap.Modal(modal).show();
+
+}
 
 },2500);
 
@@ -341,7 +379,13 @@ setInterval(()=>{
 
 students++;
 
-document.getElementById("studentCount").innerHTML=students+"+";
+const student=document.getElementById("studentCount");
+
+if(student){
+
+student.innerHTML=students+"+";
+
+}
 
 },10000);
 
