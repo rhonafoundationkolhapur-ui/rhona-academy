@@ -192,3 +192,23 @@ counter.innerText=target+"+";
 update();
 
 });
+
+// Auto Product Slider
+
+const slider=document.querySelector('#productSlider');
+
+if(slider){
+
+new bootstrap.Carousel(slider,{
+
+interval:2500,
+
+ride:'carousel',
+
+pause:false,
+
+wrap:true
+
+});
+
+}
