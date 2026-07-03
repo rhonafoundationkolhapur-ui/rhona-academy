@@ -941,3 +941,15 @@ box-shadow:0 0 0 0 rgba(37,211,102,0);
 }
 
 }
+
+#productSlider img{
+
+transition:.5s;
+
+}
+
+#productSlider img:hover{
+
+transform:scale(1.04);
+
+}
