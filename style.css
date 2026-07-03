@@ -989,3 +989,31 @@ opacity:.75;
 }
 
 }
+
+/* Version 4 Curriculum */
+
+#curriculum .card{
+
+border:none;
+
+border-radius:20px;
+
+transition:.35s;
+
+}
+
+#curriculum .card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+#curriculum h4{
+
+color:#0F766E;
+
+font-weight:700;
+
+}
