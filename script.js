@@ -332,3 +332,15 @@ document.getElementById('offerModal')
 },2500);
 
 }
+
+// Live Student Counter
+
+let students=1000;
+
+setInterval(()=>{
+
+students++;
+
+document.getElementById("studentCount").innerHTML=students+"+";
+
+},10000);
