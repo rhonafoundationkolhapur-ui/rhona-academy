@@ -212,3 +212,29 @@ wrap:true
 });
 
 }
+
+// Review Slider
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const reviewSlider=document.querySelector("#reviewSlider");
+
+if(reviewSlider){
+
+new bootstrap.Carousel(reviewSlider,{
+
+interval:3000,
+
+ride:"carousel",
+
+pause:false,
+
+wrap:true,
+
+touch:true
+
+});
+
+}
+
+});
