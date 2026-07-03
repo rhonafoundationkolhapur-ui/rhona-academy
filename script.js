@@ -353,8 +353,6 @@ new bootstrap.Modal(modal).show();
 
 },2500);
 
-}
-
 });
 
 setTimeout(()=>{
@@ -369,7 +367,6 @@ new bootstrap.Modal(modal).show();
 
 },2500);
 
-}
 
 // Live Student Counter
 
