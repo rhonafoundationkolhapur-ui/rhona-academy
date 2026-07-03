@@ -248,3 +248,15 @@ call.innerHTML="📞";
 call.className="call-float";
 
 document.body.appendChild(call);
+
+// AOS Animation
+
+AOS.init({
+
+duration:1000,
+
+once:true,
+
+offset:100
+
+});
