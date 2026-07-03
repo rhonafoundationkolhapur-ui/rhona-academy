@@ -1097,3 +1097,31 @@ background:#0F766E;
 color:white;
 
 }
+
+.hero{
+    display:flex !important;
+    min-height:100vh !important;
+    align-items:center !important;
+    background:#ffffff !important;
+    color:#000 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    position:relative !important;
+    z-index:10 !important;
+}
+
+.hero h1,
+.hero h2,
+.hero p,
+.hero span,
+.hero a{
+    color:#000 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.hero-image{
+    max-width:450px;
+    width:100%;
+    display:block !important;
+}
