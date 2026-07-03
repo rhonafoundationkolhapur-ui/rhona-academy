@@ -500,3 +500,26 @@ font-weight:700;
 background:linear-gradient(135deg,#198754,#0d5c2b)!important;
 
 }
+
+/* Featured Product Slider */
+
+#productSlider img{
+
+height:500px;
+
+object-fit:cover;
+
+border-radius:25px;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+
+background-color:#198754;
+
+border-radius:50%;
+
+padding:20px;
+
+}
