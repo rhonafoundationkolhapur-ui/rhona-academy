@@ -881,3 +881,17 @@ box-shadow:0 20px 40px rgba(0,0,0,.18);
 transform:scale(1.05);
 
 }
+
+.review-img{
+
+transition:.5s;
+
+cursor:pointer;
+
+}
+
+.review-img:hover{
+
+transform:scale(1.03);
+
+}
