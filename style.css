@@ -1017,3 +1017,53 @@ color:#0F766E;
 font-weight:700;
 
 }
+
+/* ==========================
+VERSION 4 PRODUCTS
+========================== */
+
+.product-card{
+
+border:none;
+
+border-radius:25px;
+
+overflow:hidden;
+
+transition:.4s;
+
+background:#fff;
+
+}
+
+.product-card img{
+
+height:280px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 25px 45px rgba(0,0,0,.15);
+
+}
+
+.product-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.product-card h4{
+
+color:#0F766E;
+
+font-weight:700;
+
+}
