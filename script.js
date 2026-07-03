@@ -356,3 +356,15 @@ card.style.transition="0.4s";
 });
 
 });
+
+// Success Cards Animation
+
+document.querySelectorAll(".success-card").forEach((card)=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transition=".4s";
+
+});
+
+});
