@@ -550,3 +550,13 @@ border-radius:50%;
 padding:18px;
 
 }
+
+/* QR Payment Card */
+
+.payment-card img{
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
