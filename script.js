@@ -238,3 +238,13 @@ touch:true
 }
 
 });
+
+const call=document.createElement("a");
+
+call.href="tel:8482838716";
+
+call.innerHTML="📞";
+
+call.className="call-float";
+
+document.body.appendChild(call);
