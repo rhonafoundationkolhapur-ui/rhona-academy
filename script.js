@@ -260,3 +260,47 @@ once:true,
 offset:100
 
 });
+
+// Premium Navbar
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector(".navbar");
+
+if(window.scrollY>80){
+
+nav.classList.add("scrolled");
+
+}else{
+
+nav.classList.remove("scrolled");
+
+}
+
+});
+
+const heroTitle=document.querySelector(".hero h1");
+
+if(heroTitle){
+
+heroTitle.animate(
+
+[
+
+{opacity:0,transform:"translateY(40px)"},
+
+{opacity:1,transform:"translateY(0)"}
+
+],
+
+{
+
+duration:1200,
+
+fill:"forwards"
+
+}
+
+);
+
+}
