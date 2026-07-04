@@ -1146,3 +1146,25 @@ color:white;
     visibility:visible !important;
     opacity:1 !important;
 }
+
+#payment *{
+    opacity:1 !important;
+    visibility:visible !important;
+    display:initial;
+}
+
+#payment h1,
+#payment h2,
+#payment h3,
+#payment h4,
+#payment h5,
+#payment p,
+#payment li,
+#payment a{
+    color:#000 !important;
+}
+
+#payment img{
+    display:block !important;
+    max-width:280px;
+}
