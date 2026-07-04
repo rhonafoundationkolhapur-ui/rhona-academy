@@ -1,26 +1,25 @@
-// ===============================
-// RHONA FOUNDATION
-// Premium JavaScript
-// ===============================
+// =====================================================
+// RHONA Academy
+// Premium JavaScript v1.0
+// =====================================================
 
-// Navbar Shadow on Scroll
+// Navbar Scroll Effect
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
 
 const navbar = document.querySelector(".navbar");
 
-if(window.scrollY>50){
+if(window.scrollY > 80){
 
-navbar.classList.add("shadow-lg");
+navbar.classList.add("scrolled");
 
 }else{
 
-navbar.classList.remove("shadow-lg");
+navbar.classList.remove("scrolled");
 
 }
 
 });
-
 
 // Smooth Scroll
 
@@ -30,20 +29,99 @@ anchor.addEventListener("click",function(e){
 
 e.preventDefault();
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
 
 behavior:"smooth"
 
 });
 
-});
+}
 
 });
 
+});
+
+// AOS
+
+if(typeof AOS!=="undefined"){
+
+AOS.init({
+
+duration:900,
+
+once:true,
+
+offset:120
+
+});
+
+}
+
+// Product Card Hover
+
+document.querySelectorAll(".product-card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-12px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+// Success Card Hover
+
+document.querySelectorAll(".success-card").forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)";
+
+});
+
+});
+
+// Review Slider
+
+const reviewSlider=document.querySelector("#reviewSlider");
+
+if(reviewSlider){
+
+new bootstrap.Carousel(reviewSlider,{
+
+interval:3500,
+
+ride:"carousel",
+
+pause:false,
+
+wrap:true,
+
+touch:true
+
+});
+
+}
 
 // Reveal Animation
 
-const cards=document.querySelectorAll(".card");
+const cards=document.querySelectorAll(".card,.product-card,.success-card");
 
 const observer=new IntersectionObserver(entries=>{
 
@@ -65,315 +143,182 @@ cards.forEach(card=>{
 
 card.style.opacity="0";
 
-card.style.transform="translateY(40px)";
+card.style.transform="translateY(50px)";
 
-card.style.transition="0.8s";
+card.style.transition=".8s";
 
 observer.observe(card);
 
 });
 
+// Hero Animation
 
-// WhatsApp Floating Button
+const hero=document.querySelector(".hero h1");
 
-const whatsapp=document.createElement("a");
+if(hero){
 
-whatsapp.href="https://wa.me/918482838716";
-
-whatsapp.target="_blank";
-
-whatsapp.innerHTML='<i class="fab fa-whatsapp"></i>';
-
-whatsapp.className="whatsapp-float";
-
-document.body.appendChild(whatsapp);
-
-
-// Back To Top Button
-
-const topBtn=document.createElement("button");
-
-topBtn.innerHTML="⬆";
-
-topBtn.className="top-btn";
-
-document.body.appendChild(topBtn);
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>400){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-// Offer Countdown (24 Hours)
-
-let endDate = new Date();
-
-endDate.setHours(endDate.getHours() + 24);
-
-function updateCountdown(){
-
-let now = new Date();
-
-let diff = endDate - now;
-
-if(diff<=0){
-
-document.getElementById("countdown").innerHTML="Offer Ended";
-
-return;
-
-}
-
-let h=Math.floor(diff/(1000*60*60));
-
-let m=Math.floor((diff%(1000*60*60))/(1000*60));
-
-let s=Math.floor((diff%(1000*60))/1000);
-
-const countdown = document.getElementById("countdown");
-
-if(countdown){
-
-countdown.innerHTML=`${h}h ${m}m ${s}s`;
-
-}
-
-`${h}h ${m}m ${s}s`;
-
-}
-
-setInterval(updateCountdown,1000);
-
-updateCountdown();
-
-// Animated Counter
-
-const counters=document.querySelectorAll('.counter');
-
-counters.forEach(counter=>{
-
-const update=()=>{
-
-const target=+counter.getAttribute('data-target');
-
-const count=+counter.innerText;
-
-const increment=target/100;
-
-if(count<target){
-
-counter.innerText=Math.ceil(count+increment);
-
-setTimeout(update,20);
-
-}else{
-
-counter.innerText=target+"+";
-
-}
-
-}
-
-update();
-
-});
-
-// Auto Product Slider
-
-const slider=document.querySelector('#productSlider');
-
-if(slider){
-
-new bootstrap.Carousel(slider,{
-
-interval:2500,
-
-ride:'carousel',
-
-pause:false,
-
-wrap:true
-
-});
-
-}
-
-// Review Slider
-
-document.addEventListener("DOMContentLoaded", function(){
-
-const reviewSlider=document.querySelector("#reviewSlider");
-
-if(reviewSlider){
-
-new bootstrap.Carousel(reviewSlider,{
-
-interval:3000,
-
-ride:"carousel",
-
-pause:false,
-
-wrap:true,
-
-touch:true
-
-});
-
-}
-
-});
-
-const call=document.createElement("a");
-
-call.href="tel:8482838716";
-
-call.innerHTML="📞";
-
-call.className="call-float";
-
-document.body.appendChild(call);
-
-// AOS Animation
-
-if (typeof AOS !== "undefined") {
-    AOS.init({
-        duration:1000,
-        once:true,
-        offset:100
-    });
-}
-
-// Premium Navbar
-
-window.addEventListener("scroll",()=>{
-
-const nav=document.querySelector(".navbar");
-
-if(window.scrollY>80){
-
-nav.classList.add("scrolled");
-
-}else{
-
-nav.classList.remove("scrolled");
-
-}
-
-});
-
-const heroTitle=document.querySelector(".hero h1");
-
-if(heroTitle){
-
-heroTitle.animate(
-
-[
-
-{opacity:0,transform:"translateY(40px)"},
-
-{opacity:1,transform:"translateY(0)"}
-
-],
+hero.animate([
 
 {
+
+opacity:0,
+
+transform:"translateY(40px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0px)"
+
+}
+
+],{
 
 duration:1200,
 
 fill:"forwards"
 
-}
-
-);
-
-}
-
-// Offer Popup
-
-const modal=document.getElementById("offerModal");
-
-if(modal){
-
-setTimeout(()=>{
-
-new bootstrap.Modal(modal).show();
-
-},2500);
-
 });
 
-setTimeout(()=>{
-
-const modal=document.getElementById("offerModal");
-
-if(modal){
-
-new bootstrap.Modal(modal).show();
-
 }
 
-},2500);
+// Premium Badge Animation
 
+const badge=document.querySelector(".premium-badge");
 
-// Live Student Counter
-
-let students=1000;
+if(badge){
 
 setInterval(()=>{
 
-students++;
+badge.style.transform="scale(1.04)";
 
-const student=document.getElementById("studentCount");
+setTimeout(()=>{
 
-if(student){
+badge.style.transform="scale(1)";
 
-student.innerHTML=students+"+";
+},400);
+
+},2500);
 
 }
 
-},10000);
+// Sticky Button Pulse
 
-// Product Card Animation
+const sticky=document.querySelector(".sticky-buy");
 
-document.querySelectorAll(".product-card").forEach((card)=>{
+if(sticky){
 
-card.addEventListener("mouseenter",()=>{
+setInterval(()=>{
 
-card.style.transition="0.4s";
+sticky.style.transform="scale(1.02)";
+
+setTimeout(()=>{
+
+sticky.style.transform="scale(1)";
+
+},500);
+
+},2000);
+
+}
+
+// Floating WhatsApp Pulse
+
+const whatsapp=document.querySelector(".whatsapp-float");
+
+if(whatsapp){
+
+setInterval(()=>{
+
+whatsapp.style.transform="scale(1.1)";
+
+setTimeout(()=>{
+
+whatsapp.style.transform="scale(1)";
+
+},400);
+
+},2500);
+
+}
+
+// Floating Call Pulse
+
+const call=document.querySelector(".call-float");
+
+if(call){
+
+setInterval(()=>{
+
+call.style.transform="scale(1.08)";
+
+setTimeout(()=>{
+
+call.style.transform="scale(1)";
+
+},400);
+
+},3000);
+
+}
+
+// Auto Close Navbar
+
+const navLinks=document.querySelectorAll(".navbar-collapse .nav-link");
+
+const navCollapse=document.querySelector(".navbar-collapse");
+
+navLinks.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+if(window.innerWidth<992){
+
+new bootstrap.Collapse(navCollapse).hide();
+
+}
 
 });
 
 });
 
-// Success Cards Animation
+// Current Year
 
-document.querySelectorAll(".success-card").forEach((card)=>{
+const year=document.getElementById("year");
 
-card.addEventListener("mouseenter",()=>{
+if(year){
 
-card.style.transition=".4s";
+year.innerHTML=new Date().getFullYear();
+
+}
+
+// Loading Animation
+
+window.addEventListener("load",()=>{
+
+document.body.classList.add("loaded");
 
 });
 
+// Disable Right Click
+
+document.addEventListener("contextmenu",e=>{
+
+e.preventDefault();
+
 });
+
+// Disable Image Drag
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.setAttribute("draggable","false");
+
+});
+
+// Console Message
+
+console.log("RHONA Academy Premium Landing Page Loaded Successfully");
