@@ -1125,3 +1125,24 @@ color:white;
     width:100%;
     display:block !important;
 }
+
+#payment{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:relative !important;
+    z-index:10 !important;
+    background:#f8fff8 !important;
+}
+
+#payment .container,
+#payment .row,
+#payment .col-lg-6{
+    display:block;
+}
+
+.payment-box{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
